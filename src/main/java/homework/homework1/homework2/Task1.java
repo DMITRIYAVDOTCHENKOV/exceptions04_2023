@@ -12,6 +12,7 @@ public class Task1 {
 //        System.out.println("Вы ввели число: " + number);
 
         fractionalNumberRequest();
+//        readFloatFromConsole();
     }
 
     public static float readFloatFromConsole() {
@@ -30,15 +31,14 @@ public class Task1 {
     }
 
     public static void fractionalNumberRequest() {
-        boolean numbers = true;
         float number = 0;
-        while (numbers) {
+        while (true) {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Введите дробное число");
             try {
                 number = scanner.nextFloat();
                 System.out.println("Вы ввели: " + number);
-                numbers = false;
+                break;
             } catch (InputMismatchException e) {
                 System.out.println("Не верный формат");
                 System.out.println("Проверьте что вы ввели именно число!, и убедитесь что используйте запятую!");
